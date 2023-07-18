@@ -6,10 +6,10 @@ public class backController : MonoBehaviour
 {
     void Update()
     {
-        transform.Translate(-0.1f,0,0);
-        if(transform.position.x < -21f)
+        transform.Translate(-0.001f,0,0);
+        if(transform.position.x < -26.5f)
         {
-            transform.position = new Vector3(13f,0,0);
+            transform.position = new Vector3(8.97f,0,0);
         }
     }
 }
