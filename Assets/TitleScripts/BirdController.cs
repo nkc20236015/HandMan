@@ -1,16 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class BirdController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    AudioSource audiosource;
+    public AudioClip clip;
+
     void Start()
     {
-        
+        audiosource = GetComponent<AudioSource>();
+        Invoke("Bird",8.5f);
     }
-
-    // Update is called once per frame
+    void Bird()
+    {
+        audiosource.PlayOneShot(clip);
+    }
     void Update()
     {
         

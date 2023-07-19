@@ -10,9 +10,10 @@ public class boxController : MonoBehaviour
     void Start()
     {
         rd = GetComponent<Rigidbody2D>();
+        audiosource1 = GetComponent<AudioSource>();
+
         Invoke("box_gravity", 8.0f);
 
-        audiosource1 = GetComponent<AudioSource>();
     }
     void box_gravity()
     {
@@ -20,11 +21,12 @@ public class boxController : MonoBehaviour
     }
     void Update()
     {
-        
+       
     }
-    private void OnCollisionEnter(Collision col)
+    void OnCollisionEnter2D(Collision2D col)
     {
-        if(tag == "floor")
+        Debug.Log("è∞Ç…êGÇÍÇΩ");
+        if(col.gameObject.tag == "floor")
         {
             audiosource1.PlayOneShot(se);
         }
